@@ -251,3 +251,7 @@ export function spliceBy<T>(array: T[], condition: (value: T) => boolean) {
     }
     return result;
 }
+
+export function sleep(timeout: number) {
+    return new Promise<void>(resolve => window.setTimeout(resolve, timeout));
+}
